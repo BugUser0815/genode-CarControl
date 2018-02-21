@@ -53,6 +53,14 @@ set config {
 		<config>
 			<mosquitto ip-address="10.200.32.75" />
 			<network dhcp="yes" />
+			<libc rtc="/dev/rtc" cwd="/dev/rtc" stdin="/dev/rtc" stdout="/dev/rtc" stderr="/dev/rtc">
+                                <vfs>
+                                        <dir name="dev">
+                                                <inline name="rtc">2018-02-21 09:00
+                                                </inline>
+                                        </dir>
+                                </vfs>
+                        </libc>
 		</config>
 	</start>
 }
